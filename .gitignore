@@ -1,0 +1,106 @@
+####################################################
+# 1. Sistema Operativo
+####################################################
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+####################################################
+# 2. IDEs y Editores (Visual Studio, VS Code, Rider)
+####################################################
+.vs/
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sln.iml
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.code-workspace
+
+####################################################
+# 3. Backend (.NET / C#)
+####################################################
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+*.pidb
+*.sbr
+
+# .NET Core / .NET 8 specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nuget.props
+*.nuget.targets
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.coverage
+*.coveragexml
+
+# EF Core generated bundles
+efbundle*
+
+####################################################
+# 4. Frontend (Angular / Node.js)
+####################################################
+# Dependencies
+node_modules/
+jspm_packages/
+.vite/
+
+# Angular specific
+.angular/
+frontend/**/.angular/
+frontend/**/dist/
+frontend/**/tmp/
+frontend/**/out-tsc/
+frontend/**/coverage/
+
+# Logs and debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Editor directories for frontend
+frontend/**/.idea/
+frontend/**/.vscode/
+
+####################################################
+# 5. Monorepo & Varios
+####################################################
+backend/**/appsettings.Development.json
+backend/**/appsettings.Local.json
+backend/**/appsettings.Production.json
+backend/**/appsettings.*.user.json
+frontend/**/src/environments/environment.local.ts
+
+# Database files (SQLite, local MDF, etc.)
+*.mdf
+*.ldf
+*.ndf
+*.sqlite
+*.sqlite3
+
+# Packaging
+*.nupkg
+*.snk
+*.pfx
+
+# Docs generated
+docs/_site/
