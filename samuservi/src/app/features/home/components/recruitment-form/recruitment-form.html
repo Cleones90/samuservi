@@ -1,0 +1,92 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="grid grid-cols-1 md:grid-cols-2 gap-md">
+  <div class="space-y-2">
+    <label class="block font-label-lg text-label-lg text-on-surface">Nombre Completo</label>
+    <input
+      formControlName="nombreCompleto"
+      class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary-container focus:ring-0 rounded-lg p-3 transition-colors"
+      placeholder="Ej: Juan Pérez"
+      type="text"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label class="block font-label-lg text-label-lg text-on-surface">Teléfono</label>
+    <input
+      formControlName="telefono"
+      class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary-container focus:ring-0 rounded-lg p-3 transition-colors"
+      placeholder="099-000-0000"
+      type="tel"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label class="block font-label-lg text-label-lg text-on-surface">Correo Electrónico</label>
+    <input
+      formControlName="correo"
+      class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary-container focus:ring-0 rounded-lg p-3 transition-colors"
+      placeholder="nombre@ejemplo.com"
+      type="email"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label class="block font-label-lg text-label-lg text-on-surface">Dirección Domiciliaria</label>
+    <input
+      formControlName="direccion"
+      class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary-container focus:ring-0 rounded-lg p-3 transition-colors"
+      placeholder="Sector / Ciudad"
+      type="text"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label class="block font-label-lg text-label-lg text-on-surface">Modelo de Vehículo</label>
+    <input
+      formControlName="modeloVehiculo"
+      class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary-container focus:ring-0 rounded-lg p-3 transition-colors"
+      placeholder="Ej: Toyota Camry"
+      type="text"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label class="block font-label-lg text-label-lg text-on-surface">Año y Placa</label>
+    <input
+      formControlName="anioPlaca"
+      class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary-container focus:ring-0 rounded-lg p-3 transition-colors"
+      placeholder="2023 - GSB-0000"
+      type="text"
+    />
+  </div>
+
+  <div class="md:col-span-2 space-y-2">
+    <label class="block font-label-lg text-label-lg text-on-surface">Años de Experiencia</label>
+    <select
+      formControlName="experiencia"
+      class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:border-secondary-container focus:ring-0 rounded-lg p-3 transition-colors"
+    >
+      @for (option of experienceOptions; track option) {
+        <option [value]="option">{{ option }}</option>
+      }
+    </select>
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="isSubmitting"
+    [style.opacity]="isSubmitting ? '0.7' : '1'"
+    class="md:col-span-2 py-4 rounded-xl font-bold font-headline-md transition-colors mt-4"
+    [class.bg-primary]="!submitted"
+    [class.text-on-primary]="!submitted"
+    [class.bg-green-600]="submitted"
+    [class.text-white]="submitted"
+  >
+    @if (submitted) {
+      Solicitud Enviada ✓
+    } @else if (isSubmitting) {
+      Enviando...
+    } @else {
+      Enviar Solicitud de Ingreso
+    }
+  </button>
+</form>

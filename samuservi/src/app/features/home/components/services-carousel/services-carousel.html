@@ -1,0 +1,20 @@
+<section class="py-xl bg-surface" id="servicios" appScrollReveal>
+  <div class="px-margin-desktop mb-lg">
+    <h2 class="font-headline-lg text-headline-lg text-primary text-center">Nuestros servicios</h2>
+    <div class="w-24 h-1 bg-secondary-container mx-auto mt-4 rounded-full"></div>
+  </div>
+
+  <div class="relative overflow-hidden w-full py-8">
+    <div class="flex animate-infinite-scroll gap-gutter">
+      @for (service of services; track service.title) {
+        <div class="service-card bg-surface-container-lowest rounded-xl p-md shadow-lg border border-outline-variant/30 flex-shrink-0 w-[300px]">
+          <div [class]="service.iconBg + ' w-16 h-16 rounded-lg flex items-center justify-center mb-4'">
+            <span [class]="'material-symbols-outlined ' + service.iconColor + ' text-4xl'">{{ service.icon }}</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md mb-2">{{ service.title }}</h3>
+          <p class="text-on-surface-variant font-body-md mb-4">{{ service.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

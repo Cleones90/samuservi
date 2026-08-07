@@ -1,0 +1,20 @@
+<section class="py-xl bg-surface-container-low" id="como-funciona" appScrollReveal>
+  <div class="px-margin-desktop text-center mb-lg">
+    <h2 class="font-headline-lg text-headline-lg text-primary">Cómo funciona</h2>
+    <p class="text-on-surface-variant mt-2 font-body-lg">Tu viaje seguro en solo 4 pasos</p>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-margin-mobile grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-secondary-fixed-dim/30 -z-10 translate-y-[-50%]"></div>
+
+    @for (step of steps; track step.title) {
+      <div class="flex flex-col items-center text-center">
+        <div class="w-20 h-20 rounded-full bg-on-primary shadow-xl border-4 border-secondary-container flex items-center justify-center mb-6 z-10">
+          <span class="material-symbols-outlined text-secondary text-4xl">{{ step.icon }}</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md mb-2">{{ step.title }}</h3>
+        <p class="text-on-surface-variant font-body-md">{{ step.description }}</p>
+      </div>
+    }
+  </div>
+</section>

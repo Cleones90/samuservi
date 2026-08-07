@@ -1,0 +1,24 @@
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#0F4C81]/90 backdrop-blur-md dark:bg-[#0F4C81]/95 border-b border-[#00B4D8]/20 shadow-2xl shadow-[#0F4C81]/20 flex justify-between items-center px-6 md:px-12 py-4">
+  <div class="flex items-center gap-6">
+    <img
+      alt="SAMUSERVI Logo"
+      style="height: 5.5rem; width: auto; object-fit: contain; animation: pulseLogo 1.5s ease-in-out infinite;"
+      [class.active-pulse]="isAnimating"
+      src="assets/images/logo1.png"
+    />
+    <span class="hidden md:block font-headline-lg text-headline-lg font-extrabold tracking-wide shimmer-text ml-2">SAMUSERVI S.A.</span>
+  </div>
+
+  <div class="hidden lg:flex items-center gap-8">
+    <a class="nav-link transition-all" routerLink="/" fragment="inicio">Inicio</a>
+    <a class="nav-link transition-colors" routerLink="/nosotros">Nosotros</a>
+    <a class="nav-link transition-colors" routerLink="/" fragment="servicios">Servicios</a>
+    <a class="nav-link transition-colors" routerLink="/" fragment="como-funciona">Cómo funciona</a>
+    <a class="nav-link transition-colors" routerLink="/" fragment="trabaja-con-nosotros">Trabaja con nosotros</a>
+    <a class="nav-link transition-colors" routerLink="/" fragment="contacto">Contacto</a>
+  </div>
+
+  <button routerLink="/login" class="login-btn font-bold py-2 px-6 rounded-lg font-label-lg text-label-lg">
+    Inicio de Sesión
+  </button>
+</nav>

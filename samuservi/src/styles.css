@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #1a2a4a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d7e3ff;
+  --color-on-primary-container: #001b3f;
+  --color-primary-fixed: #d7e3ff;
+  --color-primary-fixed-dim: #aac7ff;
+  --color-secondary: #465a91;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #d9e2ff;
+  --color-on-secondary-container: #00164a;
+  --color-secondary-fixed: #d9e2ff;
+  --color-secondary-fixed-dim: #afc6ff;
+  --color-on-secondary-fixed: #00164a;
+  --color-surface: #f9f9ff;
+  --color-on-surface: #1a1b21;
+  --color-surface-container: #eceef4;
+  --color-surface-container-low: #f2f3fa;
+  --color-on-surface-variant: #44474e;
+  --color-outline-variant: #c4c6d0;
+  --color-on-primary-variant: #0a1a35;
+
+  --font-display-lg: 'Poppins', sans-serif;
+  --font-headline-lg: 'Poppins', sans-serif;
+  --font-headline-md: 'Poppins', sans-serif;
+  --font-body-md: 'Inter', sans-serif;
+  --font-body-lg: 'Inter', sans-serif;
+  --font-label-lg: 'Inter', sans-serif;
+  --font-label-sm: 'Inter', sans-serif;
+
+  --text-display-lg: 3rem;
+  --text-headline-lg: 2.25rem;
+  --text-headline-md: 1.5rem;
+  --text-body-lg: 1.125rem;
+  --text-body-md: 1rem;
+  --text-label-lg: 1rem;
+  --text-label-sm: 0.875rem;
+
+  --spacing-margin-desktop: 2rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-xl: 3rem;
+  --spacing-lg: 2rem;
+  --spacing-md: 1.5rem;
+  --spacing-sm: 1rem;
+  --spacing-xs: 0.5rem;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+.hero-gradient {
+  background: linear-gradient(90deg, rgba(10, 20, 40, 0.85) 0%, rgba(10, 20, 40, 0.4) 60%, rgba(0, 0, 0, 0.1) 100%);
+}
